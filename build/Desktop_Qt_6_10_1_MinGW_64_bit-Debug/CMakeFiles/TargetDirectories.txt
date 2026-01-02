@@ -1,0 +1,9 @@
+D:/Student_Management_System/build/Desktop_Qt_6_10_1_MinGW_64_bit-Debug/CMakeFiles/Student_Management_System.dir
+D:/Student_Management_System/build/Desktop_Qt_6_10_1_MinGW_64_bit-Debug/CMakeFiles/edit_cache.dir
+D:/Student_Management_System/build/Desktop_Qt_6_10_1_MinGW_64_bit-Debug/CMakeFiles/rebuild_cache.dir
+D:/Student_Management_System/build/Desktop_Qt_6_10_1_MinGW_64_bit-Debug/CMakeFiles/list_install_components.dir
+D:/Student_Management_System/build/Desktop_Qt_6_10_1_MinGW_64_bit-Debug/CMakeFiles/install.dir
+D:/Student_Management_System/build/Desktop_Qt_6_10_1_MinGW_64_bit-Debug/CMakeFiles/install/local.dir
+D:/Student_Management_System/build/Desktop_Qt_6_10_1_MinGW_64_bit-Debug/CMakeFiles/install/strip.dir
+D:/Student_Management_System/build/Desktop_Qt_6_10_1_MinGW_64_bit-Debug/CMakeFiles/Student_Management_System_autogen_timestamp_deps.dir
+D:/Student_Management_System/build/Desktop_Qt_6_10_1_MinGW_64_bit-Debug/CMakeFiles/Student_Management_System_autogen.dir

@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>DisplayStudentDialog</class>
+ <widget class="QDialog" name="DisplayStudentDialog">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1248</width>
+    <height>915</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Dialog</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">color:rgb(0, 0, 0)</string>
+  </property>
+  <widget class="QTableWidget" name="tableWidget">
+   <property name="geometry">
+    <rect>
+     <x>330</x>
+     <y>0</y>
+     <width>661</width>
+     <height>601</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QTableWidget {
+    background-color: #2b2b2b;  
+    color: white;              
+    gridline-color: #555555;    
+    border: 2px solid #555555;
+    font-size: 14px;
+}
+
+QHeaderView::section {
+    background-color: #4a148c;   
+    color: white;
+    padding: 6px;
+    border: 1px solid #2b2b2b;
+    font-weight: bold;
+    font-size: 15px;
+}
+
+
+QTableWidget::item:selected {
+    background-color: #7c43bd;   
+    color: white;
+}
+QPushButton {
+    min-height: 30px; 
+    max-height: 30px;  
+}</string>
+   </property>
+   <column>
+    <property name="text">
+     <string>Name</string>
+    </property>
+   </column>
+   <column>
+    <property name="text">
+     <string>Roll No</string>
+    </property>
+   </column>
+   <column>
+    <property name="text">
+     <string>Cgpa</string>
+    </property>
+   </column>
+   <column>
+    <property name="text">
+     <string>Attendance</string>
+    </property>
+   </column>
+  </widget>
+  <widget class="QPushButton" name="pushButton_Close">
+   <property name="geometry">
+    <rect>
+     <x>910</x>
+     <y>610</y>
+     <width>81</width>
+     <height>41</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>12</pointsize>
+     <bold>true</bold>
+    </font>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">color:rgb(255, 255, 255)</string>
+   </property>
+   <property name="text">
+    <string>Close</string>
+   </property>
+  </widget>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

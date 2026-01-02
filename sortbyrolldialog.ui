@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>SortByRollDialog</class>
+ <widget class="QDialog" name="SortByRollDialog">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1879</width>
+    <height>1027</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Dialog</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">QWidget {
+    color: white;
+    font-weight: bold;
+    font-size: 14px;
+}
+QLineEdit {
+    background-color: #333333;
+    color: white;
+    border: 1px solid #555555;
+    padding: 5px;
+}
+QTableWidget {
+    background-color: #222222;
+    color: white;
+    gridline-color: white;
+    border: 1px solid #555555;
+}
+QHeaderView::section {
+    background-color: #333333;
+    color: white;
+    font-weight: bold;
+    border: 1px solid white;
+    padding: 4px;
+}
+QPushButton {
+    background-color: #333333;
+    color: white;
+    border: 2px solid #8e24aa;
+    border-radius: 6px;
+    padding: 6px;
+    font-weight: bold;
+}
+QPushButton:hover {
+    background-color: #8e24aa;
+}</string>
+  </property>
+  <widget class="QWidget" name="">
+   <property name="geometry">
+    <rect>
+     <x>490</x>
+     <y>120</y>
+     <width>341</width>
+     <height>321</height>
+    </rect>
+   </property>
+   <layout class="QVBoxLayout" name="verticalLayout">
+    <item>
+     <widget class="QPushButton" name="pushButton_Sort">
+      <property name="text">
+       <string>Sort And Display List</string>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <widget class="QPushButton" name="pushButton_Close">
+      <property name="text">
+       <string>Close</string>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <widget class="QTableWidget" name="tableWidget"/>
+    </item>
+   </layout>
+  </widget>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

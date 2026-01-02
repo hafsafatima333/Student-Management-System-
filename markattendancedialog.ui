@@ -1,0 +1,465 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MarkAttendanceDialog</class>
+ <widget class="QDialog" name="MarkAttendanceDialog">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>2536</width>
+    <height>1371</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Dialog</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">/* Pure Dialog ka background dark */
+QDialog { 
+    background-color: #1f1f1f; 
+    color: white; 
+}
+
+/* Labels (Naam waghera) white */
+QLabel { 
+    color: white; 
+    font-weight: bold; 
+    font-size: 13px; 
+}
+
+/* Input Boxes */
+QLineEdit { 
+    background-color: #2b2b2b; 
+    color: white; 
+    border: 1px solid #555555; 
+    padding: 4px; 
+    border-radius: 3px;
+}
+
+/* Group Boxes (Dabbe) */
+QGroupBox { 
+    border: 1px solid #555555; 
+    border-radius: 5px; 
+    margin-top: 10px; 
+    color: white; 
+    font-weight: bold; 
+}
+QGroupBox::title { 
+    subcontrol-origin: margin; 
+    left: 10px; 
+    padding: 0 3px; 
+}
+
+/* Buttons - Purple Theme */
+QPushButton { 
+    background-color: #2b2b2b; 
+    color: white; 
+    border: 2px solid #8e44ad; 
+    border-radius: 5px; 
+    padding: 5px 10px; 
+    font-weight: bold; 
+}
+QPushButton:hover { 
+    background-color: #8e44ad; 
+}
+
+/* Dropdown Menus */
+QComboBox { 
+    background-color: #2b2b2b; 
+    color: white; 
+    border: 1px solid #555555; 
+    padding: 3px; 
+}
+QComboBox QAbstractItemView { 
+    background-color: #2b2b2b; 
+    color: white; 
+    selection-background-color: #8e44ad; 
+}</string>
+  </property>
+  <widget class="QFrame" name="frame">
+   <property name="geometry">
+    <rect>
+     <x>420</x>
+     <y>80</y>
+     <width>461</width>
+     <height>541</height>
+    </rect>
+   </property>
+   <property name="frameShape">
+    <enum>QFrame::Shape::StyledPanel</enum>
+   </property>
+   <property name="frameShadow">
+    <enum>QFrame::Shadow::Raised</enum>
+   </property>
+   <widget class="QLabel" name="label">
+    <property name="geometry">
+     <rect>
+      <x>140</x>
+      <y>20</y>
+      <width>311</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Segoe UI</family>
+      <pointsize>-1</pointsize>
+      <bold>true</bold>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">font-size: 18px;
+font-weight: bold;
+color: white;
+margin-bottom: 10px;</string>
+    </property>
+    <property name="text">
+     <string>Mark Attendance</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_2">
+    <property name="geometry">
+     <rect>
+      <x>60</x>
+      <y>70</y>
+      <width>181</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>-1</pointsize>
+      <bold>true</bold>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">color:rgb(255, 255, 255)</string>
+    </property>
+    <property name="text">
+     <string>Enter  Student Roll No</string>
+    </property>
+   </widget>
+   <widget class="Line" name="line">
+    <property name="geometry">
+     <rect>
+      <x>60</x>
+      <y>170</y>
+      <width>331</width>
+      <height>20</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <bold>true</bold>
+     </font>
+    </property>
+    <property name="orientation">
+     <enum>Qt::Orientation::Horizontal</enum>
+    </property>
+   </widget>
+   <widget class="QFrame" name="frame_2">
+    <property name="geometry">
+     <rect>
+      <x>60</x>
+      <y>190</y>
+      <width>331</width>
+      <height>141</height>
+     </rect>
+    </property>
+    <property name="frameShape">
+     <enum>QFrame::Shape::StyledPanel</enum>
+    </property>
+    <property name="frameShadow">
+     <enum>QFrame::Shadow::Raised</enum>
+    </property>
+    <widget class="QLabel" name="label_5">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>10</y>
+       <width>111</width>
+       <height>16</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>-1</pointsize>
+       <bold>true</bold>
+      </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">color:rgb(255, 255, 255)</string>
+     </property>
+     <property name="text">
+      <string>Information</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_Name">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>50</y>
+       <width>111</width>
+       <height>16</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>-1</pointsize>
+       <bold>true</bold>
+      </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">color:rgb(255, 255, 255)</string>
+     </property>
+     <property name="text">
+      <string>Name</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_CurrentAtt">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>100</y>
+       <width>141</width>
+       <height>16</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>-1</pointsize>
+       <bold>true</bold>
+      </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">color:rgb(255, 255, 255)</string>
+     </property>
+     <property name="text">
+      <string>Current Attendance</string>
+     </property>
+    </widget>
+    <widget class="QLineEdit" name="lineEdit_Name">
+     <property name="geometry">
+      <rect>
+       <x>60</x>
+       <y>40</y>
+       <width>261</width>
+       <height>39</height>
+      </rect>
+     </property>
+     <property name="readOnly">
+      <bool>true</bool>
+     </property>
+    </widget>
+    <widget class="QLineEdit" name="lineEdit_CurrentAtt">
+     <property name="geometry">
+      <rect>
+       <x>150</x>
+       <y>90</y>
+       <width>171</width>
+       <height>39</height>
+      </rect>
+     </property>
+     <property name="readOnly">
+      <bool>true</bool>
+     </property>
+    </widget>
+   </widget>
+   <widget class="QPushButton" name="pushButton_Search">
+    <property name="geometry">
+     <rect>
+      <x>290</x>
+      <y>140</y>
+      <width>101</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <bold>true</bold>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">color: rgb(255, 255, 255);</string>
+    </property>
+    <property name="text">
+     <string>Search</string>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="lineEdit_Roll">
+    <property name="geometry">
+     <rect>
+      <x>60</x>
+      <y>90</y>
+      <width>331</width>
+      <height>39</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="QFrame" name="frame_3">
+    <property name="geometry">
+     <rect>
+      <x>60</x>
+      <y>340</y>
+      <width>331</width>
+      <height>141</height>
+     </rect>
+    </property>
+    <property name="frameShape">
+     <enum>QFrame::Shape::StyledPanel</enum>
+    </property>
+    <property name="frameShadow">
+     <enum>QFrame::Shadow::Raised</enum>
+    </property>
+    <widget class="QLabel" name="label_6">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>10</y>
+       <width>111</width>
+       <height>31</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>-1</pointsize>
+       <bold>true</bold>
+      </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">color:rgb(255, 255, 255)</string>
+     </property>
+     <property name="text">
+      <string>Marking Section</string>
+     </property>
+    </widget>
+    <widget class="QComboBox" name="comboBox_Week">
+     <property name="geometry">
+      <rect>
+       <x>30</x>
+       <y>50</y>
+       <width>72</width>
+       <height>37</height>
+      </rect>
+     </property>
+     <item>
+      <property name="text">
+       <string>Week 1</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>Week 2</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>Week 3</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>Week 4</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>Week 5</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>Week 7</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>Week 8</string>
+      </property>
+     </item>
+    </widget>
+    <widget class="QComboBox" name="comboBox_Day">
+     <property name="geometry">
+      <rect>
+       <x>130</x>
+       <y>50</y>
+       <width>81</width>
+       <height>37</height>
+      </rect>
+     </property>
+     <item>
+      <property name="text">
+       <string>Mon</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>Tues</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>Wed</string>
+      </property>
+     </item>
+    </widget>
+    <widget class="QComboBox" name="comboBox_Status">
+     <property name="geometry">
+      <rect>
+       <x>230</x>
+       <y>50</y>
+       <width>81</width>
+       <height>37</height>
+      </rect>
+     </property>
+     <item>
+      <property name="text">
+       <string>Present</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>Absent</string>
+      </property>
+     </item>
+    </widget>
+    <widget class="QPushButton" name="pushButton_Mark">
+     <property name="geometry">
+      <rect>
+       <x>160</x>
+       <y>100</y>
+       <width>151</width>
+       <height>31</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Mark Attendance</string>
+     </property>
+    </widget>
+   </widget>
+   <widget class="QPushButton" name="pushButton_Close">
+    <property name="geometry">
+     <rect>
+      <x>320</x>
+      <y>490</y>
+      <width>71</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <bold>true</bold>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">color: rgb(255, 255, 255);</string>
+    </property>
+    <property name="text">
+     <string>Close</string>
+    </property>
+   </widget>
+  </widget>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
