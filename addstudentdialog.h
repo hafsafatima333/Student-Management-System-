@@ -16,16 +16,15 @@ public:
     ~AddStudentDialog();
 
 private slots:
-    // Ye raha naya function declaration
     void on_pushButton_Add_clicked();
 
-    // Agar cancel button bhi hai to:
-    // void on_pushButton_Cancel_clicked();
 
     void on_pushButton_2_clicked();
+
+    void on_AddStudentDialog_accepted();
 
 private:
     Ui::AddStudentDialog *ui;
 };
 
-#endif // ADDSTUDENTDIALOG_H
+#endif

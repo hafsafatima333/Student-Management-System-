@@ -9,7 +9,6 @@ UpdateStudentDialog::UpdateStudentDialog(QWidget *parent)
 {
     ui->setupUi(this);
 
-    // Shuru mein Update button aur input boxes ko band rakhein
     ui->lineEdit_Name->setEnabled(false);
     ui->lineEdit_CGPA->setEnabled(false);
     ui->pushButton_Update->setEnabled(false);
@@ -20,10 +19,8 @@ UpdateStudentDialog::~UpdateStudentDialog()
     delete ui;
 }
 
-// --- SEARCH BUTTON CLICKED ---
 void UpdateStudentDialog::on_pushButton_Search_clicked()
 {
-    // 1. Roll Number uthao (TextEdit hai isliye .toPlainText() use kiya)
     bool isInt;
     int searchRoll = ui->lineEdit_Roll->toPlainText().toInt(&isInt);
 
@@ -32,29 +29,23 @@ void UpdateStudentDialog::on_pushButton_Search_clicked()
         return;
     }
 
-    // 2. Linked List mein dhoondo
     Node* foundNode = globalLinkedList.searchByRoll(searchRoll);
 
     if(foundNode != nullptr)
     {
-        // --- MATCH FOUND ---
         QMessageBox::information(this, "Found", "Student Found: " + foundNode->name + "\nNow you can update details.");
 
-        // 3. Ab boxes ko Enable (Khol) do
         ui->lineEdit_Name->setEnabled(true);
         ui->lineEdit_CGPA->setEnabled(true);
         ui->pushButton_Update->setEnabled(true);
 
-        // Purana data dikhao (String conversion ke sath)
         ui->lineEdit_Name->setText(foundNode->name);
         ui->lineEdit_CGPA->setText(QString::number(foundNode->cgpa));
     }
     else
     {
-        // --- NOT FOUND ---
         QMessageBox::warning(this, "Not Found", "Roll Number not found!");
 
-        // Wapis band kar do
         ui->lineEdit_Name->clear();
         ui->lineEdit_CGPA->clear();
         ui->lineEdit_Name->setEnabled(false);
@@ -63,10 +54,8 @@ void UpdateStudentDialog::on_pushButton_Search_clicked()
     }
 }
 
-// --- UPDATE BUTTON CLICKED ---
 void UpdateStudentDialog::on_pushButton_Update_clicked()
 {
-    // 1. Roll No aur Naya Data uthao (.toPlainText() ke sath)
     int roll = ui->lineEdit_Roll->toPlainText().toInt();
     QString newName = ui->lineEdit_Name->toPlainText();
     QString newCgpaStr = ui->lineEdit_CGPA->toPlainText();
@@ -76,7 +65,6 @@ void UpdateStudentDialog::on_pushButton_Update_clicked()
         return;
     }
 
-    // 2. Node ko update karo
     Node* nodeToUpdate = globalLinkedList.searchByRoll(roll);
 
     if(nodeToUpdate != nullptr)
@@ -92,7 +80,6 @@ void UpdateStudentDialog::on_pushButton_Update_clicked()
     }
 }
 
-// Cancel Button
 void UpdateStudentDialog::on_pushButton_3_clicked()
 {
     this->close();

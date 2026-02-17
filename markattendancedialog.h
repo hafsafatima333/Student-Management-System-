@@ -24,4 +24,4 @@ private:
     Ui::MarkAttendanceDialog *ui;
 };
 
-#endif // MARKATTENDANCEDIALOG_H
+#endif

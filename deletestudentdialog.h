@@ -16,7 +16,6 @@ public:
     ~DeleteStudentDialog();
 
 private slots:
-    // Ye do lines missing thin, isliye error aa raha tha
     void on_pushButton_Delete_clicked();
     void on_pushButton_Close_clicked();
 
@@ -24,4 +23,4 @@ private:
     Ui::DeleteStudentDialog *ui;
 };
 
-#endif // DELETESTUDENTDIALOG_H
+#endif

@@ -23,4 +23,4 @@ private:
     Ui::SearchByRollDialog *ui;
 };
 
-#endif // SEARCHBYROLLDIALOG_H
+#endif

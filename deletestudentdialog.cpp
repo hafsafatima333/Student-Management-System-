@@ -10,10 +10,8 @@ DeleteStudentDialog::DeleteStudentDialog(QWidget *parent) :
 {
     ui->setupUi(this);
 
-    // Styling (Dark Theme)
     this->setStyleSheet("QDialog { background-color: #1f1f1f; color: white; } QLabel { color: white; font-weight: bold; } QLineEdit { background-color: #2b2b2b; color: white; border: 1px solid #555; } QPushButton { background-color: #2b2b2b; color: white; border: 2px solid #c0392b; border-radius: 5px; padding: 5px; } QPushButton:hover { background-color: #c0392b; }");
 
-    // Sirf Numbers allow karo
     ui->lineEdit_Roll_2->setValidator(new QIntValidator(0, 999999, this));
 }
 
@@ -33,13 +31,11 @@ void DeleteStudentDialog::on_pushButton_Delete_clicked()
 
     int roll = rollStr.toInt();
 
-    // Confirm karo ke delete karna hai ya nahi?
     QMessageBox::StandardButton reply;
     reply = QMessageBox::question(this, "Confirm Delete", "Are you sure you want to delete this student?",
                                   QMessageBox::Yes|QMessageBox::No);
 
     if (reply == QMessageBox::Yes) {
-        // Asal function call karo
         bool deleted = globalLinkedList.deleteStudent(roll);
 
         if(deleted) {

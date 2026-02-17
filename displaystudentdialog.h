@@ -16,11 +16,10 @@ public:
     ~DisplayStudentDialog();
 
 private slots:
-    // --- YE LINE ZAROORI HAI ---
     void on_pushButton_Close_clicked();
 
 private:
     Ui::DisplayStudentDialog *ui;
 };
 
-#endif // DISPLAYSTUDENTDIALOG_H
+#endif

@@ -9,8 +9,7 @@ SortByRollDialog::SortByRollDialog(QWidget *parent) :
 {
     ui->setupUi(this);
 
-    // --- TABLE SETUP ---
-    ui->tableWidget->setColumnCount(4); // 4 Cheezein dikhayenge
+    ui->tableWidget->setColumnCount(4);
     QStringList headers = {"Name", "Roll No", "CGPA", "Attendance"};
     ui->tableWidget->setHorizontalHeaderLabels(headers);
     ui->tableWidget->horizontalHeader()->setSectionResizeMode(QHeaderView::Stretch);
@@ -21,18 +20,15 @@ SortByRollDialog::~SortByRollDialog()
     delete ui;
 }
 
-// --- SORT & DISPLAY BUTTON ---
 void SortByRollDialog::on_pushButton_Sort_clicked()
 {
     Node* head = globalLinkedList.head;
 
-    // 1. Agar list khali hai to wapis jao
     if(head == nullptr) {
         QMessageBox::information(this, "Empty", "No students to sort!");
         return;
     }
 
-    // 2. Node Count karo (Bubble sort ke liye)
     int count = 0;
     Node* temp = head;
     while(temp != nullptr) {
@@ -40,22 +36,18 @@ void SortByRollDialog::on_pushButton_Sort_clicked()
         temp = temp->next;
     }
 
-    // 3. BUBBLE SORT LOGIC (Roll No ke hisaab se)
     for(int i = 0; i < count - 1; i++)
     {
         Node* current = head;
         for(int j = 0; j < count - 1 - i; j++)
         {
-            // Agar pehla wala doosre se bada hai -> SWAP karo
             if(current->rollNo > current->next->rollNo)
             {
-                // Values Swap (Adla Badli)
                 std::swap(current->rollNo, current->next->rollNo);
                 std::swap(current->name, current->next->name);
                 std::swap(current->cgpa, current->next->cgpa);
                 std::swap(current->attendance, current->next->attendance);
 
-                // Attendance Array bhi swap karna padega
                 for(int w=0; w<8; w++) {
                     for(int d=0; d<3; d++) {
                         std::swap(current->weeklyAttendance[w][d], current->next->weeklyAttendance[w][d]);
@@ -66,9 +58,8 @@ void SortByRollDialog::on_pushButton_Sort_clicked()
         }
     }
 
-    // 4. DISPLAY IN TABLE (Ab list sort ho chuki hai)
-    ui->tableWidget->setRowCount(0); // Purana saaf karo
-    temp = head; // Wapis shuru se
+    ui->tableWidget->setRowCount(0);
+    temp = head;
 
     while(temp != nullptr)
     {
@@ -86,8 +77,13 @@ void SortByRollDialog::on_pushButton_Sort_clicked()
     QMessageBox::information(this, "Success", "Students sorted by Roll Number!");
 }
 
-// --- CLOSE BUTTON ---
 void SortByRollDialog::on_pushButton_Close_clicked()
 {
     this->close();
 }
+
+void SortByRollDialog::on_SortByRollDialog_accepted()
+{
+
+}
+

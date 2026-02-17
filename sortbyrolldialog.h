@@ -19,8 +19,10 @@ private slots:
     void on_pushButton_Sort_clicked();
     void on_pushButton_Close_clicked();
 
+    void on_SortByRollDialog_accepted();
+
 private:
     Ui::SortByRollDialog *ui;
 };
 
-#endif // SORTBYROLLDIALOG_H
+#endif

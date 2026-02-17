@@ -15,7 +15,6 @@ public:
     explicit SearchByCgpaDialog(QWidget *parent = nullptr);
     ~SearchByCgpaDialog();
 
-    // --- YE LINE ZAROORI HAI (Jo Error Hataegi) ---
     void setMode(bool rangeMode);
 
 private slots:
@@ -24,7 +23,7 @@ private slots:
 
 private:
     Ui::SearchByCgpaDialog *ui;
-    bool isRangeSearch; // Ye yaad rakhega ke hum kis mode mein hain
+    bool isRangeSearch;
 };
 
-#endif // SEARCHBYCGPADIALOG_H
+#endif

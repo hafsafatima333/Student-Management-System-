@@ -16,13 +16,12 @@ public:
     ~UpdateStudentDialog();
 
 private slots:
-    // Ye naye functions add kiye hain taake error khatam ho
     void on_pushButton_Search_clicked();
     void on_pushButton_Update_clicked();
-    void on_pushButton_3_clicked(); // Cancel button (agar iska naam pushButton_3 hai)
+    void on_pushButton_3_clicked();
 
 private:
     Ui::UpdateStudentDialog *ui;
 };
 
-#endif // UPDATESTUDENTDIALOG_H
+#endif

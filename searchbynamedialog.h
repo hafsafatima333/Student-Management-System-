@@ -16,12 +16,11 @@ public:
     ~SearchByNameDialog();
 
 private slots:
-    // Ye do lines missing thi, isliye error aa raha tha
-    void on_pushButton_clicked();    // Search Button
-    void on_pushButton_2_clicked();  // Close Button
+    void on_pushButton_clicked();
+    void on_pushButton_2_clicked();
 
 private:
     Ui::SearchByNameDialog *ui;
 };
 
-#endif // SEARCHBYNAMEDIALOG_H
+#endif
