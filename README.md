@@ -1,9 +1,6 @@
 # Student Management System (C++ with Qt)
 
-## Backend Overview
-
-The backend of this Student Management System is implemented in **C++** using a **Linked List data structure**. It is responsible for storing, managing, searching, and manipulating student records dynamically during program execution. No external database is used; instead, all data operations are handled in memory using efficient data structure logic.
-
+The backend of this Student Management System is implemented in **C++** using a **Linked List data structure**. It is responsible for storing, managing, searching, and manipulating student records dynamically during program execution. No external database is used instead, all data operations are handled in memory using efficient data structure logic.
 
 ## Core Data Structure
 
